@@ -7,8 +7,10 @@
         #efa94d
  */
 body {
-  height: 100vh;
-  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primaryColorDark);
 }
 :root {
   --secondaryColorLight: #d7d7d8;
@@ -24,15 +26,21 @@ body {
   font-family: sans-serif;
   font-size: 62.5%;
 }
-
+.hidden {
+  display: none;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
 /* !Login section */
 .login-section {
+  margin-top: 5rem;
   width: 100%;
-  height: 100%;
-  background-color: var(--primaryColorDark);
+  /* height: 100vh; */
+  /* background-color: var(--primaryColorDark); */
   display: flex;
   flex-direction: column;
-  gap: 10rem;
+  gap: 8rem;
   justify-content: center;
   align-items: center;
 }
@@ -49,22 +57,24 @@ body {
   padding: 4rem;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: 2rem;
   background-color: var(--secondaryColorLight);
   border: 1px solid #fff;
   border-radius: 3rem;
   box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
   width: 35%;
-  height: 45%;
 }
+
 .active-tab {
   background-color: var(--primaryColorLight);
   top: -10%;
+  transition: all 0.3s;
 }
 .inactive-tab {
   background-color: var(--secondaryColorDark);
   top: -5%;
+  transition: all 0.3s;
 }
 .tab {
   position: absolute;
@@ -86,7 +96,9 @@ body {
 }
 .login-box {
 }
-
+.confirmpwd {
+  margin-top: 3rem;
+}
 .input-field {
   display: flex;
   flex-direction: column;
@@ -101,7 +113,7 @@ body {
 
 .input-field-element {
   width: 80%;
-  height: 4rem;
+  /* height: 4rem; */
   border-radius: 1rem;
   outline: none;
   border: 2px solid var(--primaryColorLight);
@@ -113,7 +125,7 @@ input.input-field-element:focus {
   outline: none;
   transition: all 0.2s;
   border: 3px solid var(--primaryColorDark);
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .btn-login {
@@ -132,4 +144,9 @@ input.input-field-element:focus {
   transition: all 0.4s;
   background-color: var(--primaryColorDark);
   color: #fff;
+}
+.phone-bakr {
+  align-self: flex-end;
+  justify-self: center;
+  transform: translateY(-50%);
 }
