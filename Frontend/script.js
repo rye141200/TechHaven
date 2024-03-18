@@ -3,26 +3,21 @@ const loginTabEl = document.querySelector(".login-tab");
 const signupTabEl = document.querySelector(".signup-tab");
 const boxEl = document.querySelector(".box");
 
-//Tabbed element listener
-boxEl.addEventListener("click", function (e) {
-  e.preventDefault();
-  const loginBoxEl = document.querySelector(".login-box");
-  //Event delegation
-  if (e.target.classList.contains("tab")) {
-    e.target.classList.add("active-tab");
-    e.target.classList.remove("inactive-tab");
-    const closest = [...e.target.closest(".box").querySelectorAll(".tab")];
-    closest.forEach((tab) => {
-      if (tab != e.target) {
-        tab.classList.add("inactive-tab");
-        tab.classList.remove("active-tab");
-      }
-    });
-
-    const flag = e.target.parentElement.querySelector(".firstname");
-    //*toggle login or signup form
-    if (e.target.classList.contains("signup-tab") && !flag) {
-      const html = `
+/* Methods */
+const displayLoginUI = function (loginBoxEl) {
+  const elementsToRemove = document.querySelectorAll(".added");
+  elementsToRemove.forEach((element) => loginBoxEl.removeChild(element));
+  loginBoxEl.insertAdjacentHTML(
+    "beforeend",
+    `
+        <div class="input-field" id="login-btn">
+          <button class="btn btn-login">Login</button>
+      </div>
+        `
+  );
+};
+const displaySignupUI = function (loginBoxEl) {
+  const html = `
       <div class="input-field firstname added">
       <label class="input-field-label" for="fname">First name:</label>
       <input
@@ -44,7 +39,7 @@ boxEl.addEventListener("click", function (e) {
       />
     </div>
       `;
-      const htmlConfirmPassword = `
+  const htmlConfirmPassword = `
       <div class="input-field confirmpwd added">
       <label class="input-field-label confirmpwd addedPWD" for="fname">Confirm password:</label>
       <input
@@ -62,21 +57,41 @@ boxEl.addEventListener("click", function (e) {
       </div>
       `;
 
-      loginBoxEl.removeChild(document.querySelector("#login-btn"));
-      loginBoxEl.insertAdjacentHTML("afterbegin", html);
-      loginBoxEl.insertAdjacentHTML("beforeend", htmlConfirmPassword);
+  loginBoxEl.removeChild(document.querySelector("#login-btn"));
+  loginBoxEl.insertAdjacentHTML("afterbegin", html);
+  loginBoxEl.insertAdjacentHTML("beforeend", htmlConfirmPassword);
+};
+//Tabbed element listener
+boxEl.addEventListener("click", function (e) {
+  e.preventDefault();
+  const loginBoxEl = document.querySelector(".login-box");
+  const flag = e.target.parentElement.querySelector(".firstname");
+  
+  //!Guard clause
+  if (
+    (e.target.classList.contains("signup-tab") && flag) ||
+    (e.target.classList.contains("login-tab") && !flag)
+  )
+    return;
+  
+  //*Event delegation
+  if (e.target.classList.contains("tab")) {
+    e.target.classList.add("active-tab");
+    e.target.classList.remove("inactive-tab");
+    const closest = [...e.target.closest(".box").querySelectorAll(".tab")];
+    closest.forEach((tab) => {
+      if (tab != e.target) {
+        tab.classList.add("inactive-tab");
+        tab.classList.remove("active-tab");
+      }
+    });
+
+    //*toggle login or signup form
+    if (e.target.classList.contains("signup-tab") && !flag) {
+      displaySignupUI(loginBoxEl);
     } else {
       if (flag) {
-        const elementsToRemove = document.querySelectorAll(".added");
-        elementsToRemove.forEach((element) => loginBoxEl.removeChild(element));
-        loginBoxEl.insertAdjacentHTML(
-          "beforeend",
-          `
-        <div class="input-field" id="login-btn">
-          <button class="btn btn-login">Login</button>
-      </div>
-        `
-        );
+        displayLoginUI(loginBoxEl);
       }
     }
   }
