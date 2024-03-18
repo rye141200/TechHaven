@@ -61,31 +61,34 @@ const displaySignupUI = function (loginBoxEl) {
   loginBoxEl.insertAdjacentHTML("afterbegin", html);
   loginBoxEl.insertAdjacentHTML("beforeend", htmlConfirmPassword);
 };
+const toggleActiveTab = function (e) {
+  e.target.classList.add("active-tab");
+  e.target.classList.remove("inactive-tab");
+  const closest = [...e.target.closest(".box").querySelectorAll(".tab")];
+  closest.forEach((tab) => {
+    if (tab != e.target) {
+      tab.classList.add("inactive-tab");
+      tab.classList.remove("active-tab");
+    }
+  });
+};
 //Tabbed element listener
 boxEl.addEventListener("click", function (e) {
   e.preventDefault();
   const loginBoxEl = document.querySelector(".login-box");
   const flag = e.target.parentElement.querySelector(".firstname");
-  
+
   //!Guard clause
   if (
     (e.target.classList.contains("signup-tab") && flag) ||
     (e.target.classList.contains("login-tab") && !flag)
   )
     return;
-  
+
   //*Event delegation
   if (e.target.classList.contains("tab")) {
-    e.target.classList.add("active-tab");
-    e.target.classList.remove("inactive-tab");
-    const closest = [...e.target.closest(".box").querySelectorAll(".tab")];
-    closest.forEach((tab) => {
-      if (tab != e.target) {
-        tab.classList.add("inactive-tab");
-        tab.classList.remove("active-tab");
-      }
-    });
-
+    toggleActiveTab(e);
+    
     //*toggle login or signup form
     if (e.target.classList.contains("signup-tab") && !flag) {
       displaySignupUI(loginBoxEl);
