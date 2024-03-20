@@ -4,12 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <script defer src="script.js"></script>
+    <script defer type="module" src="script.js"></script>
+    <script defer type="module" src="market.js"></script>
+
     <title>TechHaven</title>
   </head>
   <body>
     <!-- Login Section -->
-    <div class="login-section">
+    <section class="login-section">
       <div class="icon-box">
         <img src="TechHaven logo.png" height="128" />
       </div>
@@ -43,7 +45,37 @@
       <div class="phone-bakr">
         <img src="phone.svg" width="256" />
       </div>
-    </div>
+    </section>
+
     <!-- User market -->
+    <section class="market hidden">
+      <div class="left-menu"></div>
+      <nav class="nav-bar">
+        <div>
+          <img class="nav-bar-logo" src="TechHaven logo.png" />
+        </div>
+        <div class="balance-cart">
+          <ion-icon class="icon" name="search-outline"></ion-icon>
+          <input class="search-bar" type="text" />
+          <div class="cart-box">
+            <ion-icon class="icon" name="cart-outline"></ion-icon>
+          </div>
+
+          <div class="balance">
+            <p>Balance:</p>
+            <p class="balance-text">$10000</p>
+          </div>
+        </div>
+      </nav>
+      <div class="market-content"></div>
+    </section>
   </body>
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+  ></script>
 </html>

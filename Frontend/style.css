@@ -29,8 +29,9 @@ body {
 .hidden {
   display: none;
   opacity: 0;
-  height: 0;
-  overflow: hidden;
+  height: 0 !important;
+  width: 0 !important;
+  overflow: hidden !important;
 }
 /* !Login section */
 .login-section {
@@ -146,4 +147,77 @@ input.input-field-element:focus {
   align-self: flex-end;
   justify-self: center;
   transform: translateY(-50%);
+}
+
+/* Market */
+.market {
+  width: 100%;
+  overflow-x: hidden;
+  display: grid;
+  grid-template-columns: 0.2fr 5fr;
+  grid-template-rows: 1fr repeat(5, 1.5fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.nav-bar {
+  background-color: #d9d9d9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10rem;
+  width: 100%;
+  grid-area: 1 / 2 / 2 / 5;
+}
+.left-menu {
+  background-color: #252120;
+
+  height: 100vh;
+  grid-area: 1 / 1 / 7 / 2;
+}
+.nav-bar-logo {
+  height: 5rem;
+  margin-left: 5rem;
+}
+.market-content {
+  grid-area: 2 / 2 / 7 / 5;
+}
+.balance-cart {
+  display: flex;
+  flex-direction: row;
+  gap: 0.2rem;
+  margin-right: 10rem;
+}
+.balance-cart {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+.icon {
+  cursor: pointer;
+  font-size: 2.5rem;
+}
+.icon:hover {
+  color: var(--primaryColorDark);
+  transition: all 0.3s;
+}
+.balance p {
+  font-size: 1.4rem;
+  color: var(--dark);
+}
+.balance-text {
+  color: var(--primaryColorDark) !important;
+}
+.search-bar {
+  padding: 0.4rem;
+  font-size: 1.4rem;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid var(--dark);
+}
+.search-bar:focus {
+  border-color: var(--primaryColorLight);
+  transform: scale(1.05);
+  transition: all 0.3s;
 }

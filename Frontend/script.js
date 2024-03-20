@@ -1,10 +1,13 @@
 "use strict";
 /** Element selection */
+
 const loginTabEl = document.querySelector(".login-tab");
 const signupTabEl = document.querySelector(".signup-tab");
 const boxEl = document.querySelector(".box");
 const loginBoxEl = document.querySelector(".login-box");
 let signupBtnEl;
+let loginBtnEl = document.querySelector(".btn-login");
+
 /* Methods */
 const displayLoginUI = function (loginBoxEl) {
   const elementsToRemove = document.querySelectorAll(".added");
@@ -18,6 +21,7 @@ const displayLoginUI = function (loginBoxEl) {
         `
   );
 };
+
 const displaySignupUI = function (loginBoxEl) {
   const html = `
       <div class="input-field firstname added">
@@ -63,6 +67,7 @@ const displaySignupUI = function (loginBoxEl) {
   loginBoxEl.insertAdjacentHTML("afterbegin", html);
   loginBoxEl.insertAdjacentHTML("beforeend", htmlConfirmPassword);
 };
+
 const toggleActive = function (tabToBeActive) {
   if (tabToBeActive === "Login") {
     loginTabEl.classList.add("active-tab");
@@ -77,6 +82,23 @@ const toggleActive = function (tabToBeActive) {
     loginTabEl.classList.add("inactive-tab");
     loginTabEl.classList.remove("active-tab");
   }
+};
+const addHiddenRecursively = function (element) {
+  if (element.children == null) return;
+  [...element.children]?.forEach((element) => {
+    element.classList.add("hidden");
+    addHiddenRecursively(element);
+  });
+};
+
+const loginBtnEventListener = function () {
+  loginBtnEl.addEventListener("click", function () {
+    const loginSectionEl = document.querySelector(".login-section");
+    loginSectionEl.classList.add("hidden");
+    [...loginSectionEl.children].forEach((child) => {
+      child.classList.add("hidden");
+    });
+  });
 };
 
 //!Tabbed element listener
@@ -101,20 +123,26 @@ boxEl.addEventListener("click", function (e) {
     if (e.target.classList.contains("signup-tab") && !flag) {
       displaySignupUI(loginBoxEl);
       signupBtnEl = document.querySelector(".btn-signup");
-      
+
       //!Display login when account created successfuly
       signupBtnEl.addEventListener("click", function () {
         if (true) {
-          //If account created sucsessfuly display login
+          //?If account created sucsessfuly display login
           displayLoginUI(loginBoxEl);
           toggleActive("Login");
+          loginBtnEl = document.querySelector(".btn-login");
+          loginBtnEventListener();
         }
       });
     } else {
       if (flag) {
         displayLoginUI(loginBoxEl);
+        loginBtnEl = document.querySelector(".btn-login");
+        loginBtnEventListener();
         signupBtnEl = null;
       }
     }
   }
 });
+
+loginBtnEventListener();
