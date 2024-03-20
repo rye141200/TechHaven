@@ -98,6 +98,7 @@ const loginBtnEventListener = function () {
     [...loginSectionEl.children].forEach((child) => {
       child.classList.add("hidden");
     });
+    document.querySelector(".market").classList.remove("hidden");
   });
 };
 
