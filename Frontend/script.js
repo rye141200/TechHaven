@@ -1,8 +1,10 @@
+"use strict";
 /** Element selection */
 const loginTabEl = document.querySelector(".login-tab");
 const signupTabEl = document.querySelector(".signup-tab");
 const boxEl = document.querySelector(".box");
-
+const loginBoxEl = document.querySelector(".login-box");
+let signupBtnEl;
 /* Methods */
 const displayLoginUI = function (loginBoxEl) {
   const elementsToRemove = document.querySelectorAll(".added");
@@ -52,7 +54,7 @@ const displaySignupUI = function (loginBoxEl) {
       </div>
       <div class="input-field added">
         <div class="input-field" id="signup-btn">
-          <button class="btn btn-login">Sign up</button>
+          <button class="btn btn-signup">Sign up</button>
         </div>
       </div>
       `;
@@ -61,21 +63,26 @@ const displaySignupUI = function (loginBoxEl) {
   loginBoxEl.insertAdjacentHTML("afterbegin", html);
   loginBoxEl.insertAdjacentHTML("beforeend", htmlConfirmPassword);
 };
-const toggleActiveTab = function (e) {
-  e.target.classList.add("active-tab");
-  e.target.classList.remove("inactive-tab");
-  const closest = [...e.target.closest(".box").querySelectorAll(".tab")];
-  closest.forEach((tab) => {
-    if (tab != e.target) {
-      tab.classList.add("inactive-tab");
-      tab.classList.remove("active-tab");
-    }
-  });
+const toggleActive = function (tabToBeActive) {
+  if (tabToBeActive === "Login") {
+    loginTabEl.classList.add("active-tab");
+    loginTabEl.classList.remove("inactive-tab");
+
+    signupTabEl.classList.add("inactive-tab");
+    signupTabEl.classList.remove("active-tab");
+  } else {
+    signupTabEl.classList.add("active-tab");
+    signupTabEl.classList.remove("inactive-tab");
+
+    loginTabEl.classList.add("inactive-tab");
+    loginTabEl.classList.remove("active-tab");
+  }
 };
-//Tabbed element listener
+
+//!Tabbed element listener
 boxEl.addEventListener("click", function (e) {
   e.preventDefault();
-  const loginBoxEl = document.querySelector(".login-box");
+
   const flag = e.target.parentElement.querySelector(".firstname");
 
   //!Guard clause
@@ -87,14 +94,26 @@ boxEl.addEventListener("click", function (e) {
 
   //*Event delegation
   if (e.target.classList.contains("tab")) {
-    toggleActiveTab(e);
-    
+    const currentEl = e.target;
+    toggleActive(currentEl.innerHTML);
+
     //*toggle login or signup form
     if (e.target.classList.contains("signup-tab") && !flag) {
       displaySignupUI(loginBoxEl);
+      signupBtnEl = document.querySelector(".btn-signup");
+      
+      //!Display login when account created successfuly
+      signupBtnEl.addEventListener("click", function () {
+        if (true) {
+          //If account created sucsessfuly display login
+          displayLoginUI(loginBoxEl);
+          toggleActive("Login");
+        }
+      });
     } else {
       if (flag) {
         displayLoginUI(loginBoxEl);
+        signupBtnEl = null;
       }
     }
   }
