@@ -1,6 +1,7 @@
 "use-strict";
 // import { os } from "./script.js";
 // console.log(os);
+
 const productsGridEl = document.querySelector(".products-grid");
 fetch("https://dummyjson.com/products")
   .then((res) => res.json())
