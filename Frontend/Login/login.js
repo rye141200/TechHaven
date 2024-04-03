@@ -83,22 +83,16 @@ const toggleActive = function (tabToBeActive) {
     loginTabEl.classList.remove("active-tab");
   }
 };
-const addHiddenRecursively = function (element) {
-  if (element.children == null) return;
-  [...element.children]?.forEach((element) => {
-    element.classList.add("hidden");
-    addHiddenRecursively(element);
-  });
-};
 
 const loginBtnEventListener = function () {
   loginBtnEl.addEventListener("click", function () {
-    const loginSectionEl = document.querySelector(".login-section");
-    loginSectionEl.classList.add("hidden");
-    [...loginSectionEl.children].forEach((child) => {
-      child.classList.add("hidden");
-    });
-    document.querySelector(".market").classList.remove("hidden");
+    if (true)
+      //Login is authenticated
+      window.location.href = `/Frontend/MarketHome/market.html`;
+    else {
+      //TODO
+      //display error
+    }
   });
 };
 
@@ -147,3 +141,7 @@ boxEl.addEventListener("click", function (e) {
 });
 
 loginBtnEventListener();
+window.addEventListener("load", function () {
+  //TODO
+  //Resets the login session
+});

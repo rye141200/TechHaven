@@ -1,155 +1,4 @@
-/*
-    *Palette:
-        #bdc4cb
-        #262121
-        #7c6b65
-        #f2800a
-        #efa94d
- */
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* background-color: var(--primaryColorDark); */
-}
-:root {
-  --secondaryColorLight: #d7d7d8;
-  --dark: #262121;
-  --secondaryColorDark: #bdc4cb;
-  --primaryColorDark: #d37006;
-  --primaryColorLight: #efa94d;
-}
-* {
-  margin: 0;
-  padding: 0;
-  /* box-sizing: border-box; */
-  font-family: sans-serif;
-  font-size: 62.5%;
-}
-.hidden {
-  display: none;
-  opacity: 0;
-  height: 0 !important;
-  width: 0 !important;
-  overflow: hidden !important;
-}
-/* !Login section */
-.login-section {
-  padding-top: 5rem;
-  width: 100%;
-  /* height: 100vh; */
-  background-color: var(--primaryColorDark);
-  display: flex;
-  flex-direction: column;
-  gap: 8rem;
-  justify-content: center;
-  align-items: center;
-}
-
-.icon-box {
-  border: solid 2px #fff;
-  border-radius: 40px;
-  background-color: var(--primaryColorLight);
-  box-shadow: 1px #000;
-}
-
-.box {
-  position: relative;
-  padding: 4rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  background-color: var(--secondaryColorLight);
-  border: 1px solid #fff;
-  border-radius: 3rem;
-  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
-  width: 30%;
-}
-
-.active-tab {
-  background-color: var(--primaryColorLight);
-  top: -5rem !important;
-  transition: all 0.3s;
-}
-.inactive-tab {
-  background-color: var(--secondaryColorDark);
-  transition: all 0.3s;
-}
-.tab {
-  position: absolute;
-  cursor: pointer;
-  padding: 2rem 4rem;
-  border-radius: 3rem;
-  font-size: 1.5rem;
-  box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.3);
-  top: -3.5rem;
-}
-.login-tab {
-  content: "Login";
-  left: 25%;
-  transform: translateX(-50%);
-}
-.signup-tab {
-  content: "Signup";
-  right: 25%;
-  transform: translateX(50%);
-}
-.login-box {
-}
-.input-field {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  padding: 2rem;
-  width: 100%;
-}
-
-.input-field-label {
-  font-size: 2.2rem;
-}
-
-.input-field-element {
-  width: 80%;
-  /* height: 4rem; */
-  border-radius: 1rem;
-  outline: none;
-  border: 2px solid var(--primaryColorLight);
-  font-size: 2rem;
-  padding: 1rem;
-}
-
-input.input-field-element:focus {
-  outline: none;
-  transition: all 0.2s;
-  border: 3px solid var(--primaryColorDark);
-  transform: scale(1.05);
-}
-
-.btn {
-  cursor: pointer;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
-  width: 15rem;
-  font-size: 1.6rem;
-  padding: 1rem;
-  outline: none;
-  border-radius: 20px;
-  border: 1px solid var(--primaryColorDark);
-}
-.btn:hover {
-  transition: all 0.4s;
-  background-color: var(--primaryColorDark);
-  color: #fff;
-}
-.phone-bakr {
-  align-self: flex-end;
-  justify-self: center;
-  transform: translateY(-50%);
-}
-
-/* Market */
+/*! Market */
 .market {
   width: 100%;
   overflow-x: hidden;
@@ -161,15 +10,24 @@ input.input-field-element:focus {
   grid-row-gap: 0px;
 }
 /* Left menu */
+.hidden-menu {
+  transform: translateX(-12rem);
+  transition: transform 0.5s ease-in-out;
+}
 .left-menu {
   background-color: #252120;
   height: 100vh;
   grid-area: 1 / 1 / 7 / 2;
   position: fixed;
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  row-gap: 2rem;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   z-index: 999;
   width: 6rem;
+  transition: transform 0.5s ease-in-out;
+}
+.active-tab {
+  color: var(--primaryColorDark) !important;
 }
 .menu-icon {
   font-size: 4rem !important;
@@ -184,6 +42,7 @@ input.input-field-element:focus {
   align-self: center;
   justify-self: center;
 }
+
 .logout-icon:hover {
   color: rgb(219, 47, 47);
   transition: all 0.3s;
@@ -194,8 +53,16 @@ input.input-field-element:focus {
   height: 5rem;
   margin-left: 5rem;
 }
+.menu-nav {
+  color: var(--dark) !important;
+}
+.menu-nav:hover {
+  color: var(--primaryColorDark) !important;
+  transition: all 0.3s;
+}
 .nav-bar {
-  background-color: #F5F2F2;
+  position: relative;
+  background-color: #f5f2f2;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -205,7 +72,7 @@ input.input-field-element:focus {
   position: fixed;
   z-index: 998;
   height: 10rem;
-  padding: 1rem;
+  padding-left: 2rem;
 }
 .balance-cart {
   display: flex;
@@ -242,7 +109,7 @@ input.input-field-element:focus {
   border: 1px solid var(--dark);
 }
 .search-bar:focus {
-  border-color: var(--primaryColorLight);
+  border-color: var(--primaryColorDark);
   transform: scale(1.05);
   transition: all 0.3s;
 }
@@ -254,6 +121,7 @@ input.input-field-element:focus {
   display: flex;
   flex-direction: column;
   gap: 5rem;
+  margin-bottom: 5rem;
 }
 .profile-section {
   display: flex;

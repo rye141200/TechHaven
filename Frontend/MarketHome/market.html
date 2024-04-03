@@ -3,61 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <script defer type="module" src="script.js"></script>
+    <link rel="stylesheet" href="\Frontend\General\General.css" />
+    <link rel="stylesheet" href="market.css" />
     <script defer type="module" src="market.js"></script>
     <title>TechHaven</title>
   </head>
   <body>
-    <!-- Login Section -->
-    <section class="login-section">
-      <div class="icon-box">
-        <img src="TechHaven logo.png" height="128" />
-      </div>
-      <div class="box login-box">
-        <div class="tab active-tab login-tab">Login</div>
-        <div class="tab inactive-tab signup-tab">Sign up</div>
-        <div class="input-field">
-          <label class="input-field-label" for="fname">Email:</label>
-          <input
-            class="input-field-element"
-            type="email"
-            id="email-input"
-            name="fname"
-            placeholder="johnsmith@hotmail.com"
-          />
-        </div>
-        <div class="input-field" id="password">
-          <label class="input-field-label" for="fname">Password:</label>
-          <input
-            class="input-field-element"
-            type="password"
-            id="password-input"
-            name="fname"
-            placeholder="Your password"
-          />
-        </div>
-        <div class="input-field" id="login-btn">
-          <button class="btn btn-login">Login</button>
-        </div>
-      </div>
-      <div class="phone-bakr">
-        <img src="phone.svg" width="256" />
-      </div>
-    </section>
-
     <!-- User market -->
-    <section class="market hidden">
-      <div class="left-menu">
-        <ion-icon class="icon menu-icon" name="home-outline"></ion-icon>
-        <ion-icon class="icon menu-icon" name="wallet-outline"></ion-icon>
-        <ion-icon class="icon menu-icon" name="reload-outline"></ion-icon>
+    <section class="market">
+      <div class="left-menu hidden-menu">
+        <ion-icon
+          class="icon menu-icon menu left-menu-btn"
+          name="close-outline"
+        ></ion-icon
+        >
+        <ion-icon class="icon menu-icon home" name="home-outline"></ion-icon>
+        <ion-icon
+          class="icon menu-icon profile"
+          name="person-circle-outline"
+        ></ion-icon>
+        <ion-icon
+          class="icon menu-icon wallet"
+          name="wallet-outline"
+        ></ion-icon>
         <ion-icon class="logout-icon" name="log-out-outline"></ion-icon>
       </div>
       <nav class="nav-bar">
-        <div>
-          <img class="nav-bar-logo" src="TechHaven logo.png" />
-        </div>
+        <!--  
+          <div>
+            <img
+            class="nav-bar-logo"
+            src="\Frontend\General\images\TechHaven logo.png"
+            />
+          </div>
+        -->
+        <ion-icon
+          class="icon menu-icon menu menu-nav"
+          name="menu-outline"
+        ></ion-icon>
         <div class="balance-cart">
           <ion-icon class="icon" name="search-outline"></ion-icon>
           <input class="search-bar" type="text" />
@@ -73,7 +56,7 @@
       </nav>
       <div class="market-content">
         <div class="profile-section">
-          <h1>Profile</h1>
+          <h1>On fire 🔥🔥🔥</h1>
           <div class="profile-box">
             <ion-icon
               class="profile-icon"
