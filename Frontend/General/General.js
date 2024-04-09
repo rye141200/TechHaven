@@ -6,9 +6,8 @@ menuEl.addEventListener("click", function () {
   leftMenuEl.classList.remove("hidden-menu");
 
   const leftMenuBtnEl = document.querySelector(".left-menu-btn");
-  
 
-  //Toggle the menu button
+  //*Toggle the menu button
   leftMenuBtnEl.addEventListener("click", function () {
     leftMenuEl.classList.add("hidden-menu");
   });
@@ -18,4 +17,8 @@ menuEl.addEventListener("click", function () {
 
   //*Wallet page listener
   //*Logout listener
+  const logoutBtnEl = document.querySelector(".logout-icon");
+  logoutBtnEl.addEventListener("click", function () {
+    window.location.href = `/Frontend/Login/login.html`;
+  });
 });

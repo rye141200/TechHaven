@@ -113,14 +113,15 @@ body {
 .balance-cart {
   display: flex;
   flex-direction: row;
-  gap: 0.2rem;
   margin-right: 10rem;
-}
-.balance-cart {
-  display: flex;
-  gap: 1rem;
+  gap: 2rem;
   align-items: center;
   justify-content: center;
+}
+.cart-box{
+  display:flex;
+  justify-items: center;
+  align-items: center;
 }
 .icon {
   cursor: pointer;

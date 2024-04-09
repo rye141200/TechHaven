@@ -42,6 +42,7 @@
 
 .active-tab {
   background-color: var(--primaryColorLight);
+  color: #fff !important;
   top: -5rem !important;
   transition: all 0.3s;
 }
