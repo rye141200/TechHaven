@@ -58,7 +58,7 @@ body {
   display: grid;
   row-gap: 2rem;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-  z-index: 999;
+  z-index: 1000;
   width: 6rem;
   transition: transform 0.5s ease-in-out;
 }
@@ -78,7 +78,10 @@ body {
   align-self: center;
   justify-self: center;
 }
-
+.close:hover {
+  color: rgb(219, 47, 47) !important;
+  transition: all 0.3s;
+}
 .logout-icon:hover {
   color: rgb(219, 47, 47);
   transition: all 0.3s;
@@ -118,8 +121,8 @@ body {
   align-items: center;
   justify-content: center;
 }
-.cart-box{
-  display:flex;
+.cart-box {
+  display: flex;
   justify-items: center;
   align-items: center;
 }
@@ -154,11 +157,12 @@ body {
 .market-content {
   grid-area: 2 / 2 / 7 / 5;
   margin-left: 5rem;
-  margin-top: 5rem;
+  margin-top: 4rem !important;
   display: flex;
   flex-direction: column;
   gap: 5rem;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
+  /* height: 100vh; */
 }
 .products-section {
   display: flex;

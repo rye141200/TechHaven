@@ -2,15 +2,16 @@
 const menuEl = document.querySelector(".menu-nav");
 //*Menu button
 menuEl.addEventListener("click", function () {
-  const leftMenuEl = document.querySelector(".left-menu");
-  leftMenuEl.classList.remove("hidden-menu");
-
-  const leftMenuBtnEl = document.querySelector(".left-menu-btn");
+  const leftMenuEl = document.querySelectorAll(".left-menu");
+  leftMenuEl.forEach((leftMenu) => leftMenu.classList.remove("hidden-menu"));
+  const leftMenuBtnEl = document.querySelectorAll(".left-menu-btn");
 
   //*Toggle the menu button
-  leftMenuBtnEl.addEventListener("click", function () {
-    leftMenuEl.classList.add("hidden-menu");
-  });
+  leftMenuBtnEl.forEach((leftMenuBtn) =>
+    leftMenuBtn.addEventListener("click", function () {
+      leftMenuEl.forEach((leftMenu) => leftMenu.classList.add("hidden-menu"));
+    })
+  );
 
   //*Profile page listener
   const profileEl = document.querySelector(".profile");
