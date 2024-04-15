@@ -24,6 +24,12 @@ menuEl.addEventListener("click", function () {
   });
   //*Wallet page listener
   //*Logout listener
+  const walletBtnEl = document.querySelector(".wallet");
+  walletBtnEl.addEventListener("click", function () {
+    window.location.href = `/Frontend/Deposit/deposit.html`;
+  });
+  
+  //*Logout listener
   const logoutBtnEl = document.querySelector(".logout-icon");
   logoutBtnEl.addEventListener("click", function () {
     window.location.href = `/Frontend/Login/login.html`;

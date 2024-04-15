@@ -10,16 +10,17 @@ valueBox.value = 0;
 
 document.addEventListener("DOMContentLoaded", function () {
     chargeBtn.addEventListener("click", function charge() {
-        let value = valueBox.value;
+        const value = valueBox.value;
         // TODO: Check if valid transaction
-        if (value == 0)
-            return;
+        if (value == 0) return;
 
         if (value > 20000) {
             invalidCharge();
-        } else {
-            let currentValue = parseFloat(cash.textContent);
-            let newValue = currentValue + parseFloat(value);
+        } 
+        // TODO: Check if valid transaction
+        else {
+            const currentValue = parseFloat(cash.textContent);
+            const newValue = currentValue + parseFloat(value);
             cash.textContent = newValue;
             validCharge();
         }
@@ -33,15 +34,15 @@ const invalidCharge = function () {
     </div>
     `;
 
-    let msg = document.getElementById("trans-box");
+    const msg = document.getElementById("trans-box");
     if (msg) {
-        let child = msg.querySelector("#valid");
+        const child = msg.querySelector("#valid");
         if (child) {
             msg.removeChild(child);
         }
     }
 
-    let transaction = document.getElementById("invalid");
+    const transaction = document.getElementById("invalid");
     if (!transaction)
         valueBox.insertAdjacentHTML("beforebegin", html);
 }
@@ -54,24 +55,22 @@ const validCharge = function () {
     </div>
     `;
 
-    let msg = document.getElementById("trans-box");
+    const msg = document.getElementById("trans-box");
     if (msg) {
-        var child = msg.querySelector("#invalid");
+        const child = msg.querySelector("#invalid");
         if (child) {
             msg.removeChild(child);
         }
     }
 
 
-    let transaction = document.getElementById("valid");
+    const transaction = document.getElementById("valid");
     if (!transaction)
         valueBox.insertAdjacentHTML("beforebegin", html);
 }
 
 
-
 valueBox.addEventListener("focus", function () {
-    console.log("Hello");
     valueBox.classList.add("highlight");
 });
 
