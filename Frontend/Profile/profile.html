@@ -40,30 +40,17 @@
             class="icon menu-icon menu menu-nav"
             name="menu-outline"
           ></ion-icon>
-          <div class="balance-cart">
-            <ion-icon class="icon" name="search-outline"></ion-icon>
-            <input class="search-bar" type="text" />
-            <div class="cart-box">
-              <ion-icon class="icon" name="cart-outline"></ion-icon>
-            </div>
-  
-            <div class="balance">
-              <p>Balance:</p>
-              <p class="balance-text">$10000</p>
-            </div>
-          </div>
+          <!--STARTING FROM HERE-->
         </nav>
         <div class="market-content">
-        <!-- INSERT CODE HERE!!! -->
         <div class="profile-section">
-            <h1>On fire 🔥🔥🔥</h1>
             <div class="profile-box">
               <ion-icon
                 class="profile-icon"
                 name="person-circle-outline"
               ></ion-icon>
-              <h1>Shawky chan</h1>
               <div class="info-box">
+              <h1>Shawky chan</h1>
                 <p class="info-box-text">
                   <span
                     id="dynamic-email"
@@ -74,9 +61,219 @@
                 </p>
                 <button class="btn-delete">Delete account</button>
               </div>
+              <div class="balance-box">
+                <h1>Balance</h1>
+                <h1 class="balance-box-text account-balance">$1000</h1>
+              </div>
             </div>
           </div>
-      </section>
+          <div class="icons-bar"> 
+            <ion-icon class="refresh-icon option-icons " name="refresh-outline"></ion-icon>
+            <ion-icon class="inventory-icon option-icons active-option" name="cart-outline"></ion-icon>
+          </div>
+          <div class="options-menu">
+            <div class="inventory-items inventory-mode">
+              <div class="inventory-item">
+                <div class="product-grid-card">
+                  <img
+                    class="product-image"
+                    src="https://cdn.dummyjson.com/product-images/3/1.jpg"
+                  />
+                  <h1 class="product-category">Phone</h1>
+                  <p class="product-description">
+                    HP omen 15 Intel core i7- 16GB RAM = 512 GB SSD
+                  </p>
+                  <h1 class="product-price">3000$</h1>
+                  <button class="market-btn product-buy">Edit!</button>
+                </div>
+                
+              </div>
+              <div class="inventory-item">
+                <div class="product-grid-card">
+                  <img
+                    class="product-image"
+                    src="https://cdn.dummyjson.com/product-images/1/1.jpg"
+                  />
+                  <h1 class="product-category">Phone</h1>
+                  <p class="product-description">
+                    HP omen 15 Intel core i7- 16GB RAM = 512 GB SSD
+                  </p>
+                  <h1 class="product-price">3000$</h1>
+                  <button class="market-btn product-buy">Edit!</button>
+                </div>
+
+              </div>
+              <div class="inventory-item">
+                <div class="product-grid-card">
+                  <img
+                    class="product-image"
+                    src="https://cdn.dummyjson.com/product-images/1/1.jpg"
+                  />
+                  <h1 class="product-category">Phone</h1>
+                  <p class="product-description">
+                    HP omen 15 Intel core i7- 16GB RAM = 512 GB SSD
+                  </p>
+                  <h1 class="product-price">3000$</h1>
+                  <button class="market-btn product-buy">Edit!</button>
+                </div>
+
+              </div>
+              <div class="inventory-item">
+                <div class="product-grid-card">
+                  <img
+                    class="product-image"
+                    src="https://cdn.dummyjson.com/product-images/1/1.jpg"
+                  />
+                  <h1 class="product-category">Phone</h1>
+                  <p class="product-description">
+                    HP omen 15 Intel core i7- 16GB RAM = 512 GB SSD
+                  </p>
+                  <h1 class="product-price">3000$</h1>
+                  <button class="market-btn product-buy">Edit!</button>
+                </div>
+
+              </div>
+              <div class="inventory-item">
+                <div class="product-grid-card">
+                  <img
+                    class="product-image"
+                    src="https://cdn.dummyjson.com/product-images/1/1.jpg"
+                  />
+                  <h1 class="product-category">Phone</h1>
+                  <p class="product-description">
+                    HP omen 15 Intel core i7- 16GB RAM = 512 GB SSD
+                  </p>
+                  <h1 class="product-price">3000$</h1>
+                  <button class="market-btn product-buy">Edit!</button>
+                </div>
+
+              </div>
+              <div class="inventory-item">
+                <div class="product-grid-card">
+                  <img
+                    class="product-image"
+                    src="https://cdn.dummyjson.com/product-images/1/1.jpg"
+                  />
+                  <h1 class="product-category">Phone</h1>
+                  <p class="product-description">
+                    HP omen 15 Intel core i7- 16GB RAM = 512 GB SSD
+                  </p>
+                  <h1 class="product-price">3000$</h1>
+                  <button class="market-btn product-buy">Edit!</button>
+                </div>
+              </div>
+              <form class="inventory-item">
+                <div class="product-grid-card add-new-item">
+                  <div class="upload-image ">
+                    <input type="file"  class="inputfile" accept="image/*"/>
+                    <ion-icon class="upload-icon" name="add-circle-outline"></ion-icon>
+                  </div>
+                  <input class="item-new-category edit-item-hover" type = "text" placeholder="category:phone" maxlength="30" required>
+                  <textarea class="item-new-description edit-item-hover" placeholder="Discreption" rows="3" cols="50" required></textarea>
+                  <input class="item-new-price edit-item-hover"type = "text" placeholder="price:xxx" maxlength="10" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 10);" required>
+                  <button class="add-btn prouct-buy ">Add</button>
+                </div>
+              </form>
+            </div>
+          
+          
+            <div class="inventory-items hidden history-mode">
+              <div class="inventory-item">
+                <div class="product-grid-card">
+                  <img
+                    class="product-image"
+                    src="https://cdn.dummyjson.com/product-images/1/1.jpg"
+                  />
+                  <h1 class="product-category">Phone</h1>
+                  <p class="product-description">
+                    HP omen 15 Intel core i7- 16GB RAM = 512 GB SSD
+                  </p>
+                  <h1 class="product-price">3000$</h1>
+                  <h2 class="product-description">Date of purchase:</h2>
+                </div>
+
+              </div>
+              <div class="inventory-item">
+                <div class="product-grid-card">
+                  <img
+                    class="product-image"
+                    src="https://cdn.dummyjson.com/product-images/1/1.jpg"
+                  />
+                  <h1 class="product-category">Phone</h1>
+                  <p class="product-description">
+                    HP omen 15 Intel core i7- 16GB RAM = 512 GB SSD
+                  </p>
+                  <h1 class="product-price">3000$</h1>
+                  <h2 class="product-description">Date of purchase:</h2>
+                </div>
+
+              </div>
+              <div class="inventory-item">
+                <div class="product-grid-card">
+                  <img
+                    class="product-image"
+                    src="https://cdn.dummyjson.com/product-images/1/1.jpg"
+                  />
+                  <h1 class="product-category">Phone</h1>
+                  <p class="product-description">
+                    HP omen 15 Intel core i7- 16GB RAM = 512 GB SSD
+                  </p>
+                  <h1 class="product-price">3000$</h1>
+                  <h2 class="product-description">Date of purchase:</h2>
+                </div>
+
+              </div>
+              <div class="inventory-item">
+                <div class="product-grid-card">
+                  <img
+                    class="product-image"
+                    src="https://cdn.dummyjson.com/product-images/1/1.jpg"
+                  />
+                  <h1 class="product-category">Phone</h1>
+                  <p class="product-description">
+                    HP omen 15 Intel core i7- 16GB RAM = 512 GB SSD
+                  </p>
+                  <h1 class="product-price">3000$</h1>
+                  <h2 class="product-description">Date of purchase:</h2>
+                </div>
+
+              </div>
+              <div class="inventory-item">
+                <div class="product-grid-card">
+                  <img
+                    class="product-image"
+                    src="https://cdn.dummyjson.com/product-images/1/1.jpg"
+                  />
+                  <h1 class="product-category">Phone</h1>
+                  <p class="product-description">
+                    HP omen 15 Intel core i7- 16GB RAM = 512 GB SSD
+                  </p>
+                  <h1 class="product-price">3000$</h1>
+                  <h2 class="product-description">Date of purchase:</h2>
+                </div>
+
+              </div>
+              <div class="inventory-item">
+                <div class="product-grid-card">
+                  <img
+                    class="product-image"
+                    src="https://cdn.dummyjson.com/product-images/1/1.jpg"
+                  />
+                  <h1 class="product-category">Phone</h1>
+                  <p class="product-description">
+                    HP omen 15 Intel core i7- 16GB RAM = 512 GB SSD
+                  </p>
+                  <h1 class="product-price">3000$</h1>
+                  <h2 class="product-description">Date of purchase:</h2>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+        </section>
+
   </body>
   <script
     type="module"
