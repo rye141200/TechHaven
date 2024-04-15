@@ -9,10 +9,10 @@
 .checkout-container {
   grid-area: 2 / 2 / 7 / 5;
   margin-left: 5rem;
-  margin-top: 5rem;
+  margin-top: 6rem!important;
   display: flex;
   flex-direction: column;
-  gap: 5rem;
+  gap: 2rem;
   margin-bottom: 5rem;
   align-self: center;
   justify-self: center;
