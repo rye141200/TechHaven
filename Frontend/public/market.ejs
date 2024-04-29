@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/General.css" />
+    <link rel="stylesheet" href="./css/market.css" />
+    <link rel="stylesheet" href="./css/checkout.css" />
+    <script defer type="module" src="./js/market.js"></script>
+    <script defer type="module" src="./js/General.js"></script>
+    <title>TechHaven</title>
+  </head>
+  <body>
+    <!-- User market -->
+    <section id="market" class="market">
+      <div class="left-menu hidden-menu">
+        <ion-icon
+          class="icon menu-icon menu left-menu-btn close"
+          name="close-outline"
+        ></ion-icon>
+        <ion-icon
+          class="icon menu-icon home active-tab"
+          name="home-outline"
+        ></ion-icon>
+        <ion-icon
+          class="icon menu-icon profile"
+          name="person-circle-outline"
+        ></ion-icon>
+        <ion-icon
+          class="icon menu-icon wallet"
+          name="wallet-outline"
+        ></ion-icon>
+        <ion-icon class="logout-icon" name="log-out-outline"></ion-icon>
+      </div>
+      <nav class="nav-bar">
+        <ion-icon
+          class="icon menu-icon menu menu-nav"
+          name="menu-outline"
+        ></ion-icon>
+        <div class="balance-cart">
+          <select id="search-by">
+            <option value="Price">Price</option>
+            <option value="Name">Name</option>
+          </select>
+          <input class="search-bar" type="text" />
+          <ion-icon
+            id="search-btn"
+            class="icon nav-bar-icon"
+            name="search-outline"
+          ></ion-icon>
+          <div class="balance">
+            <p>Balance:</p>
+            <p class="balance-text"><%=user.Balance%> $</p>
+          </div>
+          <div class="cart-box">
+            <ion-icon
+              id="cart"
+              class="icon nav-bar-icon"
+              name="cart-outline"
+            ></ion-icon>
+          </div>
+        </div>
+      </nav>
+      <div class="market-content">
+        <div class="products-section">
+          <h1 class="products-section-header">Products</h1>
+          <div class="products-grid">
+            <% products.forEach(product => { %>
+            <div class="product-grid-card">
+              <% if(product.Available_Quantity == 0) { %>
+              <div class="ribbon"><span>Sold Out</span></div>
+              <% } %>
+              <img class="product-image" src="<%= product.Image %>" />
+              <h1 class="product-category"><%= product.Name %></h1>
+              <p class="product-description">
+                <ion-icon
+                  name="document-text-outline"
+                  style="font-size: 1.4rem"
+                ></ion-icon>
+                <%= product.Description %>
+              </p>
+              <h1 class="product-price">
+                <ion-icon name="pricetag-outline" style="font-size: 1.4rem">
+                </ion-icon>
+                <%= product.Price %> $
+              </h1>
+              <button class="market-btn product-buy">Buy!</button>
+              <h1 id="pid" class="hidden"><%=product.ID%></h1>
+              <h1 id="quantity" class="hidden">
+                <%=product.Available_Quantity%>
+              </h1>
+            </div>
+            <% }); %>
+          </div>
+        </div>
+        <div class="pagination" id="pagination">
+          <a
+            id="prev"
+            class="<%= pageNumber === 1 ? 'inactive-pagination' : '' %>"
+            style="<%= pageNumber === 1 ? '' : 'cursor:pointer' %>"
+            >Previous</a
+          >
+          <a class="page-link active" data-page="<%=pageNumber %>"
+            ><%=pageNumber%></a
+          >
+          <a
+            id="next"
+            maxnumpage="<%=maxNumPages%>"
+            class="<%= pageNumber === maxNumPages ? 'inactive-pagination' : '' %>"
+            style="<%= pageNumber === maxNumPages ? '' : 'cursor:pointer' %>"
+            >Next</a
+          >
+          <p id="page-numbers"></p>
+        </div>
+      </div>
+    </section>
+    <!-- Checkout -->
+  </body>
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+  ></script>
+</html>

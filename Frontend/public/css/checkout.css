@@ -1,0 +1,113 @@
+body {
+  background: rgb(180, 180, 180);
+  background: linear-gradient(
+    0deg,
+    rgba(180, 180, 180, 1) 0%,
+    rgba(204, 204, 204, 1) 0%,
+    rgba(255, 255, 255, 1) 64%,
+    rgba(215, 215, 215, 1) 100%
+  );
+}
+.nav-bar-logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/**Checkout */
+.checkout-container {
+  grid-area: 2 / 2 / 7 / 5;
+  margin-left: 5rem;
+  margin-top: 10rem !important;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 5rem;
+  align-self: center;
+  justify-self: center;
+  z-index: 996;
+}
+.checkout-box {
+  /* height: max-content; */
+  border: 2px solid var(--primaryColorDark);
+  border-radius: 5px;
+  width: 80rem;
+  display: flex;
+  padding: 2rem;
+  flex-direction: column;
+  gap: 3.5rem;
+  box-shadow: 10px 10px 10px -5px rgba(0, 0, 0, 0.5);
+}
+.purchased-item-at-checkout {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid var(--primaryColorLight);
+  background-color: #f5f2f2;
+  border-radius: 10px;
+  padding: 1rem;
+  gap: 3rem;
+}
+.count {
+  font-size: 2.8rem;
+}
+.edit-buttons {
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+}
+.btn {
+  cursor: pointer;
+  font-size: 2.8rem;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--primaryColorDark);
+  color: #fff;
+  border: none;
+  text-align: center !important;
+  line-height: normal !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn:hover {
+  background-color: #fff;
+  color: var(--primaryColorDark);
+  transition: all 0.3s;
+}
+.delete-btn {
+  cursor: pointer;
+  font-size: 2.8rem;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+}
+.delete-btn:hover {
+  transition: all 0.3s;
+  color: rgb(233, 12, 12);
+}
+
+.complete-checkout-btn {
+  width: 25% !important;
+  background-color: var(--primaryColorLight);
+}
+.complete-checkout-btn:hover {
+  color: #fff;
+  background-color: var(--primaryColorDark);
+  transition: all 0.3s;
+}
+.cancel-checkout-btn {
+  width: 25% !important;
+  background-color: #fff;
+  color: #000;
+}
+.cancel-checkout-btn:hover {
+  color: rgb(233, 12, 12);
+  transition: all 0.2s !important;
+}
+.checkout-btns-container {
+  display: flex;
+  gap: 1rem;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/General.css" />
+    <link rel="stylesheet" href="./css/market.css" />
+    <link rel="stylesheet" href="./css/checkout.css" />
+    <script defer type="module" src="./js/checkout.js"></script>
+    <script defer type="module" src="./js/General.js"></script>
+    <title>TechHaven</title>
+  </head>
+  <body>
+    <!-- Checkout -->
+    <section id="checkout" class="market">
+      <div class="left-menu hidden">
+        <ion-icon
+          class="icon menu-icon menu left-menu-btn close"
+          name="close-outline"
+        ></ion-icon>
+        <ion-icon
+          class="icon menu-icon home active-tab"
+          name="home-outline"
+        ></ion-icon>
+        <ion-icon
+          class="icon menu-icon profile"
+          name="person-circle-outline"
+        ></ion-icon>
+        <ion-icon
+          class="icon menu-icon wallet"
+          name="wallet-outline"
+        ></ion-icon>
+        <ion-icon class="logout-icon" name="log-out-outline"></ion-icon>
+      </div>
+      <nav class="nav-bar">
+        <ion-icon
+          class="icon menu-icon menu menu-nav hidden"
+          id="menu-checkout-btn"
+          name="menu-outline"
+        ></ion-icon>
+        <div>
+          <img class="nav-bar-logo" src="./img/TechHaven logo.png" />
+        </div>
+      </nav>
+      <div class="checkout-container">
+        <h1 class="label" style="font-size: 2rem">Your items:</h1>
+        <div class="checkout-box">
+          <h1 style="font-size: 1.8rem">Please select your payment type</h1>
+          <div class="payment-type-box">
+            <div class="radio-label-container">
+              <input
+                type="radio"
+                id="credit-card"
+                value="credit"
+                name="payment-type"
+              />
+              <label for="credit-card" class="radio-label">
+                <ion-icon
+                  name="card-outline"
+                  style="font-size: 1.4rem; color: var(--primaryColorDark)"
+                ></ion-icon>
+                Credit card</label
+              ><br />
+            </div>
+            <div class="radio-label-container">
+              <input
+                type="radio"
+                id="wallet"
+                value="wallet"
+                name="payment-type"
+              />
+              <label for="wallet" class="radio-label">
+                <ion-icon
+                  style="font-size: 1.4rem; color: var(--primaryColorDark)"
+                  name="wallet-outline"
+                ></ion-icon>
+                Wallet</label
+              ><br />
+            </div>
+          </div>
+          <div class="checkout-btns-container">
+            <button class="market-btn complete-checkout-btn">
+              Complete checkout
+            </button>
+            <button class="market-btn cancel-checkout-btn">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+  ></script>
+  <script src="https://js.stripe.com/v3/"></script>
+</html>

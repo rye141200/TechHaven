@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/General.css" />
+    <link rel="stylesheet" href="./css/profile.css" />
+    <script defer type="module" src="./js/profile.js"></script>
+    <script defer type="module" src="./js/General.js"></script>
+    <title>TechHaven</title>
+  </head>
+  <body>
+    <section class="market custom-pattern">
+      <div class="left-menu hidden-menu">
+        <ion-icon
+          class="icon menu-icon menu left-menu-btn close"
+          name="close-outline"
+        ></ion-icon>
+        <ion-icon class="icon menu-icon home" name="home-outline"></ion-icon>
+        <ion-icon
+          class="icon menu-icon profile active-tab"
+          name="person-circle-outline"
+        ></ion-icon>
+        <ion-icon
+          class="icon menu-icon wallet"
+          name="wallet-outline"
+        ></ion-icon>
+        <ion-icon class="logout-icon" name="log-out-outline"></ion-icon>
+      </div>
+      <nav class="nav-bar">
+        <ion-icon
+          class="icon menu-icon menu menu-nav"
+          name="menu-outline"
+        ></ion-icon>
+        <div>
+          <img class="nav-bar-logo" src="./img/TechHaven logo.png" />
+        </div>
+        <!--STARTING FROM HERE-->
+      </nav>
+        <div class="market-content">
+        <div class="profile-section">
+          <div class="profile-box">
+            <ion-icon
+              class="profile-icon"
+              name="person-circle-outline"
+            ></ion-icon>
+            <div class="info-box">
+              <h1><%=user.First_Name%> <%=user.Last_Name%></h1>
+              <p class="info-box-text">
+                <span
+                  id="dynamic-email"
+                  style="font-size: 1.2rem; color: #efa94d"
+                  >Email:</span
+                >
+                <%= user.Email %>
+              </p>
+              <button class="btn-delete">Delete account</button>
+            </div>
+            <div class="balance-box">
+              <h1>Balance</h1>
+              <h1 class="balance-box-text account-balance">
+                $ <%= user.Balance%>
+              </h1>
+            </div>
+          </div>
+        </div>
+        <div class="icons-bar">
+          <ion-icon
+            class="refresh-icon option-icons"
+            name="refresh-outline"
+          ></ion-icon>
+          <ion-icon
+            class="inventory-icon option-icons active-option"
+            name="cart-outline"
+          ></ion-icon>
+        </div>
+        <div class="options-menu">
+          <div class="inventory-items inventory-mode">
+            <% products.forEach(item => { %>
+            <div class="inventory-item">
+              <div class="product-grid-card">
+                <img class="product-image" src="<%= item.Image %>" />
+                <h1 class="product-category"><%= item.Name %></h1>
+                <p class="product-description"><%= item.Description %></p>
+                <h1 class="product-price"><%= item.Price %>$</h1>
+                <h1 class="product_quantity product-price">
+                  <%= item.Available_Quantity%>
+                </h1>
+                <h1 class="product_id product-price hidden"><%= item.ID%></h1>
+                <button class="market-btn product-buy">Edit!</button>
+                <ion-icon  class="trash" name="trash-outline"></ion-icon>
+              </div>
+            </div>
+            <% }); %>
+            <form class="inventory-item" enctype="multipart/form-data">
+              <div class="product-grid-card add-new-item">
+                <div class="upload-image ">
+                  <input type="file"  class="inputfile" accept="image/*" name="image"/>
+                  <ion-icon class="upload-icon" name="add-circle-outline"></ion-icon>
+                </div>
+                <input class="item-new-category edit-item-hover" type = "text" placeholder="Name" maxlength="30" required>
+                <textarea class="item-new-description edit-item-hover" placeholder="Description" rows="3" cols="50" required></textarea>
+                <input class="item-new-price edit-item-hover"type = "text" placeholder="Price:$$" maxlength="10" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 10);" required>
+                <input class="item-new-quantity edit-item-hover" type= "text" placeholder="Quantity:x" maxlength="10" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 10);">
+                <button class="add-btn prouct-buy ">Add</button>
+              </div>
+            </form>
+          </div>
+        
+
+          <div class="inventory-items hidden history-mode">
+            <% const reorderedProducts = historyProducts.sort((a, b) => b.length - a.length); %>
+
+<% reorderedProducts.forEach(item => { %>
+              <div class="order-items">
+                <% item.forEach((product, index) => { %>
+                  <div class="inventory-item history-item">
+                    <div class="product-grid-card">
+                      <img class="product-image" src="<%= product.Image %>" />
+                      <h1 class="product-category"><%= product.Name %></h1>
+                      <p class="product-description"><%= product.Description %></p>
+                      <h1 class="product-price"><%= product.Total_Price %>$</h1>
+                      <h1 class="product_quantity product-price"><%= product.Quantity %></h1>
+                      <h1 class="product_id product-price hidden"><%= product.Product_ID %></h1>
+                      <h2 class="product-Date">Date of purchase: <%= product.Date %></h2>
+                      <% if (index === 0 && item.length > 1) { %>
+                        <ion-icon class="slide-down-icon" name="caret-down-outline"></ion-icon>
+                      <% } %>
+                    </div>
+                  </div>
+                <% }); %>
+              </div>
+            <% }); %>
+          </div>
+          
+
+      </div>
+    </section>
+  </body>
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+  ></script>
+</html>
