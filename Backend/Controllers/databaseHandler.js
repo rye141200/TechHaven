@@ -206,3 +206,30 @@ exports.searchByPriceCount = async (req, res, connection, price) => {
   sakila.product.Price <= ${price};`;
   return await queryPro(req, res, connection, sql);
 };
+
+exports.loginAdmin = async (req, res, connection, userData) => {
+  const sql = `SELECT * 
+               FROM sakila.admin
+               WHERE sakila.admin.ID IN 
+                    (SELECT ID  
+                      FROM sakila.user_k
+                      WHERE sakila.user_k.Email= "${userData.email}" AND sakila.user_k.Password = "${userData.password}"
+                    )
+               ;`;
+  return await queryPro(req, res, connection, sql);
+};
+
+exports.getDepositsAdmin = async (req, res, connection) => {
+  const sql = `SELECT sakila.user_k.First_Name,sakila.user_k.Last_Name,sakila.user_k.Email,sakila.deposit.Date_Of_Deposition,
+  sakila.deposit.Deposited_amount
+  FROM sakila.user_k,sakila.deposit
+  WHERE sakila.user_k.ID = sakila.deposit.RUser_SSN`;
+  return await queryPro(req, res, connection, sql);
+};
+exports.getOrdersAdmin = async (req, res, connection) => {
+  const sql = `SELECT sakila.user_k.First_Name,sakila.user_k.Last_Name,sakila.user_k.Email,sakila.order_k.Date,
+  sakila.order_k.Total_Price
+  FROM sakila.user_k,sakila.order_k
+  WHERE sakila.user_k.ID = sakila.order_k.buyer_ID`;
+  return await queryPro(req, res, connection, sql);
+};

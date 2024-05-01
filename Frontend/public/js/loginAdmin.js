@@ -15,7 +15,7 @@ const asyncFetcher = (endpoint, data) => {
 
 const login = async (loginData) => {
   try {
-    const response = await asyncFetcher("/admin/login", loginData);
+    const response = await asyncFetcher("/admin", loginData);
     const data = await response.json();
 
     if (data.status === "failure") {
@@ -24,7 +24,7 @@ const login = async (loginData) => {
     }
 
     if (data.status === "success") {
-      window.location.href = "/admin/dashboard";
+      window.location.href = "/dashboard";
     }
   } catch (err) {
     console.log(err);

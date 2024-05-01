@@ -47,18 +47,18 @@ exports.renderProfileUI = async (req, res) => {
     }
     const historyProducts = productsInOrders;
 
-    historyProducts.forEach((product) => {
-      product.forEach((item) => {
-        const dateObj = new Date(item.Date);
-        const year = dateObj.getFullYear().toString().slice(-2);
-        const month = ("0" + (dateObj.getMonth() + 1)).slice(-2);
-        const day = ("0" + dateObj.getDate()).slice(-2);
-        const hours = ("0" + dateObj.getHours()).slice(-2);
-        const minutes = ("0" + dateObj.getMinutes()).slice(-2);
-        const seconds = ("0" + dateObj.getSeconds()).slice(-2);
-        item.Date = `${year}/${month}/${day} ${hours}:${minutes}:${seconds}`;
-      });
-    });
+    // historyProducts.forEach((product) => {
+    //   product.forEach((item) => {
+    //     const dateObj = new Date(item.Date);
+    //     const year = dateObj.getFullYear().toString().slice(-2);
+    //     const month = ("0" + (dateObj.getMonth() + 1)).slice(-2);
+    //     const day = ("0" + dateObj.getDate()).slice(-2);
+    //     const hours = ("0" + dateObj.getHours()).slice(-2);
+    //     const minutes = ("0" + dateObj.getMinutes()).slice(-2);
+    //     const seconds = ("0" + dateObj.getSeconds()).slice(-2);
+    //     item.Date = `${year}/${month}/${day} ${hours}:${minutes}:${seconds}`;
+    //   });
+    // });
     //!RENDERING
     const products = JSON.parse(
       JSON.stringify(

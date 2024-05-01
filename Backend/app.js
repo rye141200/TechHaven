@@ -15,6 +15,7 @@ const checkoutHandler = require("./Controllers/checkoutHandler");
 const successRouter = require("./Routes/successRoute");
 const searchRouter = require("./Routes/searchRoute");
 const adminRouter = require("./Routes/adminRoute");
+const dashboardRouter = require("./Routes/dashboardRoute");
 const app = express();
 app.use(
   cors({
@@ -54,4 +55,5 @@ app.use("/deposit", depositRouter);
 app.use("/checkout", checkoutRouter);
 app.use("/logout", logoutRouter);
 app.use("/admin", adminRouter);
+app.use("/dashboard", dashboardRouter);
 module.exports = app;

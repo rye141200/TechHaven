@@ -7,10 +7,8 @@ const authHandler = require(`${__dirname}/../Controllers/authHandler`);
 const adminRouter = express.Router();
 
 adminRouter
-  .route("/login")
+  .route("/")
   .get(adminHandler.renderAdminLoginUI)
   .post(adminHandler.login);
-
-adminRouter.route("/dashboard").get(adminHandler.renderAdminDashboardUI);
 
 module.exports = adminRouter;

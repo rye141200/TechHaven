@@ -1,0 +1,134 @@
+.nav-bar-logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* TODO */
+
+.market-content {
+  display: flex;
+  flex-direction: row !important;
+  justify-content: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  /* padding-top: 100px; */
+  margin-top: -15rem !important;
+}
+.left-menu {
+  grid-template-rows: 1fr 1fr;
+}
+/* #table1 {
+  height: 85px;
+  background-color: white;
+  border-radius: 20em;
+  box-shadow: 0 4px 0px 4px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+
+#table2 {
+  height: 85px;
+  background-color: white;
+  border-radius: 20em;
+  box-shadow: 0 4px 0px 4px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+
+.table-content {
+  width: 100%;
+  height: auto;
+  border-radius: 20em;
+  padding: 10px;
+} */
+
+/* table {
+  width: 100%;
+  border: 3px dashed gray;
+}
+
+thead {
+  font-size: 72px;
+  font-weight: bold;
+  color: aliceblue;
+  background-color: #333;
+  width: 100%;
+}
+
+table td {
+  border: 1px solid white;
+  padding: 10px;
+  border: 3px solid black;
+}
+
+tbody {
+  font-size: 72px;
+  font-weight: 600;
+  color: aliceblue;
+  background-color: gray;
+} */
+
+/* 
+<style>
+.table_component {
+    overflow: auto;
+    width: 100%;
+}
+
+.table_component table {
+    border: 1px inset #262121;
+    height: 100%;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 2px;
+    text-align: center;
+}
+
+.table_component caption {
+    caption-side: top;
+    text-align: center;
+}
+
+.table_component th {
+    border: 1px inset #262121;
+    background-color: #f2800a;
+    color: #ededed;
+    padding: 7px;
+}
+
+.table_component td {
+    border: 1px inset #262121;
+    background-color: #ffffff;
+    color: #262121;
+    padding: 7px;
+}
+</style>
+<div class="table_component" role="region" tabindex="0">
+<table>
+    <caption>
+        <p>Deposits</p>
+    </caption>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Date</th>
+            <th>Amount</th>
+            <th>Email</th>
+            <th>First name</th>
+            <th>Last name</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+<div style="margin-top:8px">Made with <a href="https://www.htmltables.io/" target="_blank">HTML Tables</a></div>
+</div>
+*/

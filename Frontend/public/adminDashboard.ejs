@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/General.css" />
+    <link rel="stylesheet" href="./css/admin.css" />
+    <script defer type="module" src="./js/admin.js"></script>
+    <script defer type="module" src="./js/General.js"></script>
+    <title>TechHaven</title>
+  </head>
+  <style>
+    /* .table_component {
+      overflow: auto;
+    } */
+
+    .table_component table {
+      border: 1px inset #262121;
+      table-layout: fixed;
+      border-collapse: collapse;
+      border-spacing: 2px;
+      text-align: center;
+    }
+
+    .table_component caption {
+      font-size: 5rem;
+      caption-side: top;
+      text-align: center;
+    }
+
+    .table_component th {
+      font-size: 2rem;
+
+      border: 1px inset #262121;
+      background-color: #f2800a;
+      color: #ededed;
+      padding: 7px;
+    }
+
+    .table_component td {
+      font-size: 2rem;
+      border: 1px inset #262121;
+      background-color: #ffffff;
+      color: #262121;
+      padding: 7px;
+    }
+  </style>
+  <body>
+    <!-- User market -->
+    <section id="market" class="market">
+      <div class="left-menu hidden-menu">
+        <ion-icon
+          class="icon menu-icon menu left-menu-btn close"
+          name="close-outline"
+        ></ion-icon>
+        <ion-icon
+          class="hidden icon menu-icon home"
+          name="home-outline"
+        ></ion-icon>
+        <ion-icon
+          class="hidden icon menu-icon profile"
+          name="person-circle-outline"
+        ></ion-icon>
+        <ion-icon
+          class="hidden icon menu-icon wallet active-tab"
+          name="wallet-outline"
+        ></ion-icon>
+        <ion-icon class="logout-icon" name="log-out-outline"></ion-icon>
+      </div>
+
+      <nav class="nav-bar">
+        <ion-icon
+          class="icon menu-icon menu menu-nav"
+          name="menu-outline"
+        ></ion-icon>
+        <div>
+          <img class="nav-bar-logo" src="./img/TechHaven logo.png" />
+        </div>
+      </nav>
+      <div class="market-content">
+        <div class="table_component">
+          <table>
+            <caption>
+              <p>Deposits</p>
+            </caption>
+            <thead>
+              <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Date Of Deposition</th>
+                <th>Deposited Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% deposits.forEach(deposit => { %>
+              <tr>
+                <td><%= deposit.First_Name %></td>
+                <td><%= deposit.Last_Name %></td>
+                <td><%= deposit.Email %></td>
+                <td>
+                  <%= new Date(deposit.Date_Of_Deposition).toLocaleString() %>
+                </td>
+                <td><%= deposit.Deposited_amount %></td>
+              </tr>
+              <% }); %>
+            </tbody>
+          </table>
+        </div>
+        <div class="table_component">
+          <table>
+            <caption>
+              <p>Orders</p>
+            </caption>
+            <thead>
+              <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Date</th>
+                <th>Total Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% orders.forEach(order => { %>
+              <tr>
+                <td><%= order.First_Name %></td>
+                <td><%= order.Last_Name %></td>
+                <td><%= order.Email %></td>
+                <td><%= new Date(order.Date).toLocaleString() %></td>
+                <td><%= order.Total_Price %></td>
+              </tr>
+              <% }); %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+  ></script>
+</html>
