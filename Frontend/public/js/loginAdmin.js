@@ -15,13 +15,26 @@ const asyncFetcher = (endpoint, data) => {
 
 const login = async (loginData) => {
   try {
-    const databaseQuery = await asyncFetcher("/admin/login", loginData);
-    window.setTimeout(() => {
-      location.assign("/admin/dashboard");
-    }, 0);
+    const response = await asyncFetcher("/admin/login", loginData);
+    const data = await response.json();
+
+    if (data.status === "failure") {
+      clearInputs();
+      alert(data.message);
+    }
+
+    if (data.status === "success") {
+      window.location.href = "/admin/dashboard";
+    }
   } catch (err) {
-    alert("Couldn't find user");
+    console.log(err);
   }
+};
+
+const clearInputs = () => {
+  document.querySelectorAll(".input-field-element").forEach((el) => {
+    el.value = "";
+  });
 };
 
 //!Listeners
