@@ -82,15 +82,15 @@ exports.search = async (req, res) => {
         await databaseHandler.getUser(req, res, connection, loggedInUser.ID)
       )
     )[0];
-  } catch (err) {
-    res.status(404);
-  }
-  const maxNumPages =
-    maxNumberOfProducts % limit == 0
-      ? Number.parseInt(maxNumberOfProducts / limit)
-      : Number.parseInt(maxNumberOfProducts / limit) + 1;
+    const maxNumPages =
+      maxNumberOfProducts % limit == 0
+        ? Number.parseInt(maxNumberOfProducts / limit)
+        : Number.parseInt(maxNumberOfProducts / limit) + 1;
 
-  res
-    .status(200)
-    .render("market.ejs", { products, user, pageNumber, maxNumPages });
+    res
+      .status(200)
+      .render("market.ejs", { products, user, pageNumber, maxNumPages });
+  } catch (err) {
+    res.status(404).redirect("/market");
+  }
 };

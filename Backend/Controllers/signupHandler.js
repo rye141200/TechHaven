@@ -55,10 +55,16 @@ exports.checkEmails = (req, res, next) => {
 exports.signup = (req, res, next) => {
   const connection = require(`./../server`);
   const userData = req.body;
-
-  new Promise((resolve) => {
-    createUUID(connection, resolve); //!Generate ID
-  }).then((value) => {
-    insertIntoUser(connection, value, userData, res);
-  });
+  try {
+    new Promise((resolve) => {
+      createUUID(connection, resolve); //!Generate ID
+    }).then((value) => {
+      insertIntoUser(connection, value, userData, res);
+    });
+  } catch (e) {
+    res.status(400).json({
+      status: "failure",
+      message: "Couldn't signup",
+    });
+  }
 };

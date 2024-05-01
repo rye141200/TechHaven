@@ -281,7 +281,7 @@ searchBtnEl.addEventListener("click", async (e) => {
     }).then(() => {
       window.location.href = `/search?name=${searchBarEl.value}`;
     });
-  } else if (searchBy.value === "Price") {
+  } else if (searchBy.value === "Price" && isFinite(searchBarEl.value)) {
     await fetch(`/search?price=${searchBarEl.value}`, {
       method: "GET",
       headers: { "Content-type": "text/html" },

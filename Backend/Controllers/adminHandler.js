@@ -1,22 +1,5 @@
 const jwt = require("jsonwebtoken");
 
-/* const queryPro = (connection, sql) => {
-  return new Promise((resolve, reject) => {
-    connection.query(sql, (err, result) => {
-      if (err) reject(err);
-      resolve(result);
-    });
-  });
-};
-
-const getUser = async (connection, userData) => {
-  const sql = `SELECT * 
-               FROM sakila.user_k
-               WHERE sakila.user_k.Email= "${userData.email}" AND sakila.user_k.Password = "${userData.password}"`;
-
-  return await queryPro(connection, sql);
-}; */
-
 exports.renderAdminLoginUI = (req, res) => {
   res.status(200).render("loginAdmin");
 };

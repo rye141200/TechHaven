@@ -86,7 +86,10 @@ exports.updateCurrentSellingItem = async (req, res) => {
       message: "ok",
     });
   } catch (e) {
-    throw e;
+    return res.status(400).json({
+      status: "Failure",
+      message: "Couldn't update selling items",
+    });
   }
 };
 
