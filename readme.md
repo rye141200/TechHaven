@@ -6,28 +6,28 @@
 <h2 style="text-decoration:underline">Content</h2>
 <p>
     <ul>
-        <li><a href="#Intro">Introduction</a> <br>
-        <li><a href="target_bene">Target    Beneficiaries of the Project</a>
-        <li> <a href="adopted_pro">Adopted Programming Language</a>
+        <li><a href="#Intro">Introduction</a> 
+        <li><a href="#target_bene">Target    Beneficiaries of the Project</a>
+        <li> <a href="#adopted_pro">Adopted Programming Language</a>
     </ul>    
 </p>
 
 
 <hr>
-<h2 style="text-decoration:underline" id="#Intro">Introduction</h2>
+<h2 style="text-decoration:underline" id="Intro">Introduction</h2>
 <p>
     ToDo
 </p>
 
 <hr>
-<h2 style="text-decoration:underline" id="#adopted_pro">Target Beneficiaries of the Project</h2>
+<h2 style="text-decoration:underline" id="target_bene">Target Beneficiaries of the Project</h2>
 
 <p>
     ToDo
 </p>
 <hr>
 
-<h2 style="text-decoration:underline">Adopted Programming Language</h2>
+<h2 style="text-decoration:underline" id= "adopted_pro">Adopted Programming Language</h2>
 
 <p>
     <img src="https://private-user-images.githubusercontent.com/74038190/238200426-29fd6286-4e7b-4d6c-818f-c4765d5e39a9.gif?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTQ0MDU2NzEsIm5iZiI6MTcxNDQwNTM3MSwicGF0aCI6Ii83NDAzODE5MC8yMzgyMDA0MjYtMjlmZDYyODYtNGU3Yi00ZDZjLTgxOGYtYzQ3NjVkNWUzOWE5LmdpZj9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA0MjklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNDI5VDE1NDI1MVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTk0MWRkYTQyY2NmMzJiNzRjYTk0MDQ2ZTZhODI4NzZhYzM3YjcwMGEzNjgwMDJmOGQ2NDBjYjM4YTUyNjEwMTImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.kiBAKGHFxbKhMZV5M9pQHfCjW2ycOsUsnoSq-L5ijiw" alt="HTML" width="150px" height="150px">
