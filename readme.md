@@ -9,6 +9,16 @@
         <li><a href="#Intro">Introduction</a> 
         <li><a href="#target_bene">Target    Beneficiaries of the Project</a>
         <li> <a href="#adopted_pro">Adopted Programming Language</a>
+        <li> <a href="#system_Arch">System Architecture</a>
+        <li><a href="#app_level">Application-Level Protocol</a>
+        <li> <a href="#dis_database">Distributed Database Design</a>
+        <li> <a href="#time_plan">Time Plan</a>
+        <li> <a href="#test">Testing</a>
+        <li> <a href="#endUser">End-User Guide</a>
+        <li> <a href="#ResourcesNeeded">Resources Needed</a>
+        <li> <a href="#RoleofEachMember">Role of Each Member</a>
+        <li> <a href="#Appendices">Appendices</a>
+        <li> <a href="#References">References</a>
     </ul>    
 </p>
 
@@ -39,56 +49,56 @@
 <hr>
 
 
-<h2 style="text-decoration:underline">System Architecture</h2>
+<h2 style="text-decoration:underline" id = "system_Arch">System Architecture</h2>
 
 <p>
     ToDo
 </p>
 <hr>
 
-<h2 style="text-decoration:underline">Application-Level Protocol</h2>
+<h2 style="text-decoration:underline" id = "app_level">Application-Level Protocol</h2>
 
 <p>
     ToDo
 </p>
 <hr>
 
-<h2 style="text-decoration:underline">Distributed Database Design</h2>
+<h2 style="text-decoration:underline" id="dis_database">Distributed Database Design</h2>
 
 <p>
     ToDo
 </p>
 <hr>
 
-<h2 style="text-decoration:underline">Time Plan</h2>
+<h2 style="text-decoration:underline" id = "time_plan">Time Plan</h2>
 
 <p>
     ToDo
 </p>
 <hr>
 
-<h2 style="text-decoration:underline">Testing</h2>
+<h2 style="text-decoration:underline" id="test">Testing</h2>
 
 <p>
     ToDo
 </p>
 <hr>
 
-<h2 style="text-decoration:underline">End-User Guide</h2>
+<h2 style="text-decoration:underline" id="endUser">End-User Guide</h2>
 
 <p>
     ToDo
 </p>
 <hr>
 
-<h2 style="text-decoration:underline">Resources Needed</h2>
+<h2 style="text-decoration:underline"id="ResourcesNeeded">Resources Needed</h2>
 
 <p>
     ToDo
 </p>
 <hr>
 
-<h2 style="text-decoration:underline">Role of Each Member</h2>
+<h2 style="text-decoration:underline"id="RoleofEachMember">Role of Each Member</h2>
 
 <p>
     ToDo
@@ -96,14 +106,14 @@
 <hr>
 
 
-<h2 style="text-decoration:underline">Appendices</h2>
+<h2 style="text-decoration:underline"id="Appendices">Appendices</h2>
 
 <p>
     ToDo
 </p>
 <hr>
 
-<h2 style="text-decoration:underline">References</h2>
+<h2 style="text-decoration:underline"id="References">References</h2>
 
 <p>
     ToDo
