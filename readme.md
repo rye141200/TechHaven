@@ -26,7 +26,26 @@
 <hr>
 <h2 style="text-decoration:underline" id="Intro">Introduction</h2>
 <p>
-    ToDo
+    <p>Tech Haven is an online tech marketplace where users can purchase and sell a variety of tech products. It offers various online payment options for transactions. The platform's backend is constructed using the Node.js framework.</p>
+
+<p>The System also offers a lot of features:</p>
+
+<ul>
+    <li>Create a new account.</li>
+    <li>Login to your account.</li>
+    <li>It supports different types of users.</li>
+    <li>Add/Edit/remove data that is shared between the users.</li>
+    <li>Online payment where the user chooses between different payment options, through credit card or e-wallet.</li>
+    <li>Multi search options.</li>
+    <li>View your account info such as current cash balance, List of purchased items, list of sold items and items to be sold yet.</li>
+    <li>Manage inventory of the items.</li>
+    <li>Generate different kinds of reports such as reports about the transactions performed on the systems.</li>
+    <li>It uses REST APIs to allow frontend to communicate with backend.</li>
+    <li>Each user is served on a different thread.</li>
+</ul>
+
+<p>Tech Haven is an ecommerce app where tech fans and sellers can meet. Enjoy shopping with modern features. Welcome to Tech Haven, where tech meets convenience!</p>
+
 </p>
 
 <hr>
@@ -92,7 +111,8 @@
 <h2 style="text-decoration:underline" id = "system_Arch">System Architecture</h2>
 
 <p>
-    ToDo
+    <p>We adopted a 3-Tiered Client/Server Model for its distinct advantages in scalability, modularity, and maintainability. In this architecture, the client tier handles user interaction and presentation, the server tier manages application logic and processing, while the database tier stores and retrieves data. This design ensures a clear separation of concerns, facilitating easier development, deployment, and future enhancements. </p>
+    <img src="Frontend/public/img/system_Architecture.PNG">
 </p>
 <hr>
 
