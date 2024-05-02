@@ -136,7 +136,7 @@
 <h2 style="text-decoration:underline" id = "time_plan">Time Plan</h2>
 
 <p>
-    ToDo
+    <img src="Frontend/public/img/time_plan.PNG">
 </p>
 <hr>
 
