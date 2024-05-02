@@ -33,7 +33,47 @@
 <h2 style="text-decoration:underline" id="target_bene">Target Beneficiaries of the Project</h2>
 
 <p>
-    ToDo
+   <ol>
+    <li>
+        <strong>Customers:</strong>
+        <ul>
+            <li>Customers can benefit from a wide range of products available for purchase, convenient shopping experience, secure payment options, and efficient delivery services.</li>
+            <li>They can explore various products, compare prices, read reviews, and make informed purchasing decisions from the comfort of their homes.</li>
+            <li>Access to a user-friendly interface with features such as personalized recommendations, wish lists, and order tracking enhances the overall shopping experience.</li>
+        </ul>
+    </li>
+    <li>
+        <strong>Sellers:</strong>
+        <ul>
+            <li>Sellers can leverage the platform to reach a broader audience and expand their customer base.</li>
+            <li>They can create storefronts, list their products, manage inventory, and track sales performance.</li>
+            <li>Access to analytics and reporting tools enables sellers to gain insights into customer preferences and optimize their marketing strategies.</li>
+        </ul>
+    </li>
+    <li>
+        <strong>Delivery Services:</strong>
+        <ul>
+            <li>Delivery services can benefit from partnerships with the online store to fulfill orders and provide timely and reliable delivery to customers.</li>
+            <li>Collaborating with the platform can lead to increased business opportunities and revenue streams for delivery service providers.</li>
+        </ul>
+    </li>
+    <li>
+        <strong>Advertisers:</strong>
+        <ul>
+            <li>Advertisers can utilize the platform's advertising services to promote their products and target specific customer segments.</li>
+            <li>Access to a large user base and advanced targeting capabilities allows advertisers to maximize the impact of their marketing campaigns and drive sales.</li>
+        </ul>
+    </li>
+    <li>
+        <strong>Economy and Society:</strong>
+        <ul>
+            <li>The presence of a thriving online marketplace contributes to economic growth by fostering entrepreneurship, creating job opportunities, and driving innovation.</li>
+            <li>Consumers benefit from increased competition, which often leads to lower prices and improved product quality.</li>
+            <li>The convenience of online shopping helps save time and reduces the environmental footprint associated with traditional retail.</li>
+        </ul>
+    </li>
+</ol>
+
 </p>
 <hr>
 
