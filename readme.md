@@ -106,7 +106,10 @@
 <h2 style="text-decoration:underline" id="dis_database">Distributed Database Design</h2>
 
 <p>
-    ToDo
+    <h3>EER design: <h3>
+    <img src="Frontend/public/img/eer_design_db.png">
+    <h3>Relational design: <h3>
+    <img src="Frontend/public/img/relational_design_db.png">
 </p>
 <hr>
 
@@ -134,14 +137,81 @@
 <h2 style="text-decoration:underline"id="ResourcesNeeded">Resources Needed</h2>
 
 <p>
-    ToDo
+    <ol>
+    <li>
+        <strong>Hardware:</strong>
+        <ul>
+            <li>Servers: To host the website, manage databases, and handle customer transactions.</li>
+            <li>Storage Devices: For storing product images, descriptions, and other data.</li>
+            <li>Networking Equipment: Routers, switches, and firewalls to ensure reliable internet connectivity and security.</li>
+        </ul>
+    </li>
+    <li>
+        <strong>Software:</strong>
+        <ul>
+            <li>Development Tools: Integrated Development Environments (IDEs) such as Visual Studio Code or IntelliJ IDEA for coding and debugging.</li>
+            <li>Version Control Systems: Git for managing code versions and collaboration.</li>
+            <li>Operating Systems: Linux or Windows servers to host the website.</li>
+            <li>Database Management Systems: MySQL, PostgreSQL, or MongoDB for storing product information and customer data.</li>
+        </ul>
+    </li>
+    <li>
+        <strong>Human Resources:</strong>
+        <ul>
+            <li>Developers: Front-end, back-end, and full-stack developers to build and maintain the website.</li>
+            <li>Designers: UX/UI designers to create an intuitive and visually appealing user interface.</li>
+            <li>Testers: Quality Assurance (QA) engineers to test the website for bugs and ensure its functionality.</li>
+            <li>Project Managers: To oversee the project's progress, allocate resources, and coordinate tasks.</li>
+        </ul>
+    </li>
+    <li>
+        <strong>Financial Resources:</strong>
+        <ul>
+            <li>Budget: Funds for purchasing hardware, software licenses, and hiring personnel.</li>
+            <li>Marketing Budget: For advertising the online store, promoting products, and attracting customers.</li>
+        </ul>
+    </li>
+    <li>
+        <strong>Time:</strong>
+        <ul>
+            <li>Adequate time allocation for planning, development, testing, deployment, and ongoing maintenance of the website.</li>
+            <li>Timelines and deadlines for completing different stages of the project.</li>
+        </ul>
+    </li>
+</ol>
 </p>
 <hr>
 
 <h2 style="text-decoration:underline"id="RoleofEachMember">Role of Each Member</h2>
 
 <p>
-    ToDo
+TOOOOOOOOOOOOOODOOOOOOOOOOOOOO
+   <table>
+    <tr>
+        <th>Name</th>
+        <th>Role</th>
+    </tr>
+    <tr>
+        <td>John Doe</td>
+        <td>Project Manager</td>
+    </tr>
+    <tr>
+        <td>Jane Smith</td>
+        <td>Lead Developer</td>
+    </tr>
+    <tr>
+        <td>Michael Johnson</td>
+        <td>UX/UI Designer</td>
+    </tr>
+    <tr>
+        <td>Emily Brown</td>
+        <td>Quality Assurance Engineer</td>
+    </tr>
+    <tr>
+        <td>David Wilson</td>
+        <td>Database Administrator</td>
+    </tr>
+</table>
 </p>
 <hr>
 
