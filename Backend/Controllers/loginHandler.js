@@ -25,6 +25,7 @@ exports.login = async (req, res) => {
         message: "Logged in successfully ✅",
       });
   } catch (e) {
+    console.log("Error: ", e);
     res.status(400).redirect("/");
   }
 };
