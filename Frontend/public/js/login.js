@@ -127,9 +127,7 @@ const login = async (loginData) => {
         ArrayOfItems: [],
       })
     );
-    window.setTimeout(() => {
-      location.assign("/market");
-    }, 0);
+    window.location.href = "/market";
   } catch (err) {
     alert("Couldn't find user");
   }
