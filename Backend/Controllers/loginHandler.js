@@ -20,7 +20,10 @@ exports.login = async (req, res) => {
         secure: false,
         priority: "high",
       })
-      .redirect("/market");
+      .json({
+        status: "success",
+        message: "Logged in successfully ✅",
+      });
   } catch (e) {
     res.status(400).redirect("/");
   }
