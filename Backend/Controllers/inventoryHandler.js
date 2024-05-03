@@ -57,31 +57,31 @@ exports.CreateNewSellingItem = async (req, res) => {
   }
 };
 exports.updateCurrentSellingItem = async (req, res) => {
-  const loggedInUser = jwt.verify(
-    req.cookies.token,
-    process.env.JWT_SECRET_KEY
-  );
-  const connection = require("./../server");
-  const databaseHandler = require("./databaseHandler");
-  let tempPath;
-  if (req.file) {
-    tempPath =
-      "uploads/" +
-      req.file.path
-        .replace(/\\/g, "/")
-        .replace(/^.*public[\\\/]uploads[\\\/]/, "");
-  }
-  const newItem = {
-    Name: req.body.newItemCategory,
-    Description: req.body.newItemDescription,
-    Price: req.body.newItemPrice,
-    Image: tempPath || "",
-    Available_Quantity: req.body.newItemQuantity,
-    Seller_ID: loggedInUser.ID,
-  };
   try {
+    const loggedInUser = jwt.verify(
+      req.cookies.token,
+      process.env.JWT_SECRET_KEY
+    );
+    const connection = require("./../server");
+    const databaseHandler = require("./databaseHandler");
+    let tempPath;
+    if (req.file) {
+      tempPath =
+        "uploads/" +
+        req.file.path
+          .replace(/\\/g, "/")
+          .replace(/^.*public[\\\/]uploads[\\\/]/, "");
+    }
+    const newItem = {
+      Name: req.body.newItemCategory,
+      Description: req.body.newItemDescription,
+      Price: req.body.newItemPrice,
+      Image: tempPath || "",
+      Available_Quantity: req.body.newItemQuantity,
+      Seller_ID: loggedInUser.ID,
+    };
     databaseHandler.updateDB(req, res, connection, newItem, req.body.ID);
-    res.status(200).json({
+    return res.status(200).json({
       status: "success",
       message: "ok",
     });
