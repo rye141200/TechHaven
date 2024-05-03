@@ -16,6 +16,8 @@ const successRouter = require("./Routes/successRoute");
 const searchRouter = require("./Routes/searchRoute");
 const adminRouter = require("./Routes/adminRoute");
 const dashboardRouter = require("./Routes/dashboardRoute");
+const jwt = require("jsonwebtoken");
+require("dotenv").config({ path: "config.env" });
 const app = express();
 app.use(
   cors({
@@ -42,7 +44,15 @@ app.use(express.json());
 //?Routes
 //*Renders
 app.get("/", (req, res) => {
-  res.status(200).render("login.ejs");
+  try {
+    if (jwt.verify(req.cookies.token, process.env.JWT_SECRET_KEY)) {
+      res.status(200).redirect("/market");
+    } else {
+      res.status(200).render("login.ejs");
+    }
+  } catch (err) {
+    res.status(200).render("login.ejs");
+  }
 });
 app.use("/signup", signupRouter);
 app.use("/", loginRouter);
