@@ -120,7 +120,7 @@ const signup = (signupData) => {
 
 const login = async (loginData) => {
   try {
-    const databaseQuery = await asyncFetcher("", loginData);
+    const databaseQuery = await asyncFetcher("/", loginData);
     localStorage.setItem(
       "userCart",
       JSON.stringify({
@@ -156,10 +156,6 @@ const loginBtnEventListener = function () {
     }
     //TODO => ROUTE TO THE MARKET API ENDPOINT
     const response = await login(loginData);
-    /*
-    if (response.status === "success") {
-      //REPLACE WITH MARKET FETCH REQUEST
-    }*/
   });
 };
 const signupBtnEventListener = function () {
