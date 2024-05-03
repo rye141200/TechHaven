@@ -11,6 +11,7 @@ exports.login = async (req, res) => {
         message: "User not found 🧑🏿‍🦲",
       });
     const jwtUser = JSON.parse(JSON.stringify(loginResult[0]));
+    console.log(jwtUser," Login data!");
     const token = jwt.sign(jwtUser, process.env.JWT_SECRET_KEY, {
       expiresIn: "1h",
     });
