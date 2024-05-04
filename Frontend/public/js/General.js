@@ -1,6 +1,6 @@
 "use strict";
 const redirector = (endpoint) => {
-  return fetch(`http://localhost:3000${endpoint}`, {
+  return fetch(`${endpoint}`, {
     method: "GET",
     headers: { "Content-type": "text/html" },
   });
