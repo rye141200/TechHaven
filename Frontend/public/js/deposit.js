@@ -8,7 +8,7 @@ const cash = document.getElementById("cash");
 valueBox.value = 0;
 
 const makeDeposit = (newValue, depositAmount) => {
-  return fetch("http://localhost:3000/deposit", {
+  return fetch("/deposit", {
     method: "PATCH",
     headers: { "Content-type": "application/json" },
     body: JSON.stringify({ newValue, depositAmount }),
