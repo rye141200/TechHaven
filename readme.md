@@ -150,7 +150,77 @@
 <h2 style="text-decoration:underline" id="endUser">End-User Guide</h2>
 
 <p>
-    ToDo
+    <p>
+        Fisrt of all go to the website of our store through this link 
+        <a href="https://techhaven-mhxn.onrender.com/market?fbclid=IwZXh0bgNhZW0CMTAAAR13aC0_QToAXXUElD4DX2ijCqOo0bLYx25Wipn6zh0q3X6L-O2EQihdAjI_aem_ASqZS8K1odwDqO4KXl9m5w8CRt8K-s_ESPduKrY-JRQ4S5Fx-wtRAgoa4nipImQjtqX-xQdDQA-Kt3zJK8qJYnki">Techhaven</a>
+    </p>
+    <p>
+        If you already have an account on the website, simply log in using your credentials. 
+    </p>
+    <img src="Frontend/public/img/user_guide/login.PNG">
+    <ul>
+       <li>If not, please click on the 'Sign Up' button to proceed to the registration page and create a new account.
+       </li>
+        <li>Please provide your first name, last name, desired account username, and a strong password. Once you've filled in the required information, click the 'Sign Up' button to complete the registration process.
+        </li>
+    </ul>
+    <img src="Frontend/public/img/user_guide/sign_up.PNG">
+    <h3 style="text-decoration:underline">After Login</h3>
+    Welcome to the main page displaying the available products for purchase.
+    <br>
+    <br>
+    <img src="Frontend/public/img/user_guide/main_page.PNG">
+    <br>
+    <br>
+    If you're interested in purchasing any item, simply click on the 'Buy' button next to the product.
+    <br>
+    <br>
+    <img src="Frontend/public/img/user_guide/buy_iphone.PNG">
+    click Add to cart
+    <br>
+    <br>
+    <img src="Frontend/public/img/user_guide/cart_button.PNG">
+    <br>
+    You'll notice that the cart button displays a notification indicating that the item has been added successfully.
+    <br>
+    Now, to proceed with the payment for your selected product, simply click on the cart button.
+    <br>
+    <img src="Frontend/public/img/user_guide/select_payment_type.PNG">
+    <p>
+        Next, select your preferred payment method: either by Visa or by using your balance on the website.
+    </p>
+    <p>
+        If you choose Visa as your payment method, please provide the required information and then click the 'Pay' button to complete the transaction.
+    </p>
+    <img src="Frontend/public/img/user_guide/master_visa.PNG">
+    <p>
+        Congratulations! Your payment for the product has been successfully processed.
+    </p>
+    <hr>
+    <p>
+        On the sidebar, you'll find buttons for accessing your profile, returning to the home page, adding credit to your account, and logging out.
+    </p>
+    <img src="Frontend/public/img/user_guide/side_bar.PNG" height = "300px">
+    <p>
+        if you click the profile page you will find this page
+    </p>
+    <img src="Frontend/public/img/user_guide/profile.PNG">
+    <p>
+        you will find your balance and you can add products
+    </p>
+    <p>
+        if you click credit button. you will find this page
+    </p>
+    <img src="Frontend/public/img/user_guide/charge_balance.PNG">
+    <p>
+        you can charge your balance from there by determind the amount of money.
+    </p>
+    <br>
+    <br>
+    <br>
+    <p>
+        if you have any problem. Call us :)
+    </p>
 </p>
 <hr>
 
