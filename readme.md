@@ -325,28 +325,28 @@ TOOOOOOOOOOOOOODOOOOOOOOOOOOOO
         <th>Role</th>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
+        <td>Ahmad Mahfouz</td>
+        <td>Market/Checkout/Login/Signup backend and frontend</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
+        <td>Omar Saleh</td>
+        <td>Profile/Market backend and frontend</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
+        <td>Youssef Shawky</td>
+        <td>Login/Signup/Checkout frontend and backend</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
+        <td>Ahmed Bakr</td>
+        <td>UI/UX design, Deposit frontend and backend</td>
     </tr>
     <tr>
         <td>Abdallah Mohamed</td>
         <td>- Assisted in the Database Design<br>- System Testing</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
+        <td>Abdelrahman Ibrahim</td>
+        <td>Admin frontend/backend</td>
     </tr>
     <tr>
         <td></td>
