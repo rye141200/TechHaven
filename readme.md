@@ -350,23 +350,23 @@ TOOOOOOOOOOOOOODOOOOOOOOOOOOOO
     </tr>
     <tr>
         <td>Fathy Abdlhady Fathy</td>
-        <td>Participated in Database Design</td>
+        <td>Participated in Database Entity Relationship Diagram and sql queries</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
+        <td>Youssef Wael Hamdy</td>
+        <td>Participated in Database Entity Relationship Diagram</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
+        <td>Ahmed Khaled</td>
+        <td>has done a huge part of sql queries</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
+        <td>Mohamed mostafa</td>
+        <td>Assisted in the Database Design<br>- Communcation between database team and front and backend team</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
+        <td>Adham Khaled</td>
+        <td>Mapped the Database Entity Relationship Diagram</td>
     </tr>
 </table>
 </p>
