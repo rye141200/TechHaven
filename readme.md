@@ -136,7 +136,50 @@
 <h2 style="text-decoration:underline" id = "time_plan">Time Plan</h2>
 
 <p>
-    <img src="Frontend/public/img/time_plan.PNG">
+    <table>
+    <tr>
+        <th>Task</th>
+        <th>Duration</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+    </tr>
+    <tr>
+        <td>Requirement Analysis & Design Wireframes</td>
+        <td>5 daye</td>
+        <td>13/3/2024</td>
+        <td>18/3/2024</td>
+    </tr>
+    <tr>
+        <td>Frontend Development</td>
+        <td>30 days</td>
+        <td>16/3/2024</td>
+        <td>15/4/2024</td>
+    </tr>
+    <tr>
+        <td>Database Design & Setup</td>
+        <td>30 days</td>
+        <td>20/3/2024</td>
+        <td>19/4/2024</td>
+    </tr>
+    <tr>
+        <td>Backend Development</td>
+        <td>14 days</td>
+        <td>15/4/2024</td>
+        <td>29/4/2024</td>
+    </tr>
+    <tr>
+        <td>Deployment</td>
+        <td>1 day</td>
+        <td>3/5/2024</td>
+        <td>3/5/2024</td>
+    </tr>
+    <tr>
+        <td>Testing</td>
+        <td>3 days</td>
+        <td>4/5/2024</td>
+        <td>6/5/2024</td>
+    </tr>
+    </table>
 </p>
 <hr>
 
