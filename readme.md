@@ -282,24 +282,48 @@ TOOOOOOOOOOOOOODOOOOOOOOOOOOOO
         <th>Role</th>
     </tr>
     <tr>
-        <td>John Doe</td>
-        <td>Project Manager</td>
+        <td></td>
+        <td></td>
     </tr>
     <tr>
-        <td>Jane Smith</td>
-        <td>Lead Developer</td>
+        <td></td>
+        <td></td>
     </tr>
     <tr>
-        <td>Michael Johnson</td>
-        <td>UX/UI Designer</td>
+        <td></td>
+        <td></td>
     </tr>
     <tr>
-        <td>Emily Brown</td>
-        <td>Quality Assurance Engineer</td>
+        <td></td>
+        <td></td>
     </tr>
     <tr>
-        <td>David Wilson</td>
-        <td>Database Administrator</td>
+        <td>Abdallah Mohamed</td>
+        <td>- Assisted in the Database Design<br>- System Testing</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
     </tr>
 </table>
 </p>
