@@ -362,7 +362,7 @@ TOOOOOOOOOOOOOODOOOOOOOOOOOOOO
     </tr>
     <tr>
         <td>Mohamed mostafa</td>
-        <td>Assisted in the Database Design<br>- Communcation between database team and front and backend team</td>
+        <td>Assisted in the Database Design<br>Communcation between database team and front and backend team</td>
     </tr>
     <tr>
         <td>Adham Khaled</td>
