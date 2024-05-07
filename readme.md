@@ -349,8 +349,8 @@ TOOOOOOOOOOOOOODOOOOOOOOOOOOOO
         <td>Admin frontend/backend</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
+        <td>Fathy Abdlhady Fathy</td>
+        <td>Participated in Database Design</td>
     </tr>
     <tr>
         <td></td>
