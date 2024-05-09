@@ -334,7 +334,7 @@ TOOOOOOOOOOOOOODOOOOOOOOOOOOOO
     </tr>
     <tr>
         <td>Youssef Shawky</td>
-        <td>Login/Signup/Checkout frontend and backend</td>
+        <td>Login/Signup/Market frontend and backend</td>
     </tr>
     <tr>
         <td>Ahmed Bakr</td>
