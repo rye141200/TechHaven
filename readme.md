@@ -353,7 +353,7 @@ TOOOOOOOOOOOOOODOOOOOOOOOOOOOO
         <td>Participated in Database Entity Relationship Diagram and sql queries</td>
     </tr>
     <tr>
-        <td>Youssef Wael Hamdy</td>
+        <td>Youssef Wael Hamdy Ibrahim</td>
         <td>Participated in Database Entity Relationship Diagram</td>
     </tr>
     <tr>
