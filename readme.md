@@ -10,15 +10,11 @@
         <li><a href="#target_bene">Target    Beneficiaries of the Project</a>
         <li> <a href="#adopted_pro">Adopted Programming Language</a>
         <li> <a href="#system_Arch">System Architecture</a>
-        <li><a href="#app_level">Application-Level Protocol</a>
         <li> <a href="#dis_database">Distributed Database Design</a>
         <li> <a href="#time_plan">Time Plan</a>
-        <li> <a href="#test">Testing</a>
         <li> <a href="#endUser">End-User Guide</a>
         <li> <a href="#ResourcesNeeded">Resources Needed</a>
         <li> <a href="#RoleofEachMember">Role of Each Member</a>
-        <li> <a href="#Appendices">Appendices</a>
-        <li> <a href="#References">References</a>
     </ul>    
 </p>
 
@@ -116,11 +112,6 @@
 </p>
 <hr>
 
-<h2 style="text-decoration:underline" id = "app_level">Application-Level Protocol</h2>
-
-<p>
-    ToDo
-</p>
 <hr>
 
 <h2 style="text-decoration:underline" id="dis_database">Distributed Database Design</h2>
@@ -183,11 +174,6 @@
 </p>
 <hr>
 
-<h2 style="text-decoration:underline" id="test">Testing</h2>
-
-<p>
-    ToDo
-</p>
 <hr>
 
 <h2 style="text-decoration:underline" id="endUser">End-User Guide</h2>
@@ -318,7 +304,6 @@
 <h2 style="text-decoration:underline"id="RoleofEachMember">Role of Each Member</h2>
 
 <p>
-TOOOOOOOOOOOOOODOOOOOOOOOOOOOO
    <table>
     <tr>
         <th>Name</th>
@@ -372,17 +357,4 @@ TOOOOOOOOOOOOOODOOOOOOOOOOOOOO
 </p>
 <hr>
 
-
-<h2 style="text-decoration:underline"id="Appendices">Appendices</h2>
-
-<p>
-    ToDo
-</p>
-<hr>
-
-<h2 style="text-decoration:underline"id="References">References</h2>
-
-<p>
-    ToDo
-</p>
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif">
