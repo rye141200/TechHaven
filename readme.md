@@ -212,7 +212,7 @@
     Welcome to the main page displaying the available products for purchase.
     <br>
     <br>
-    <img src="Frontend/public/img/user_guide/main_page.PNG">
+    <img src="Frontend/public/img/user_guide/image.png">
     <br>
     <br>
     If you're interested in purchasing any item, simply click on the 'Buy' button next to the product.
